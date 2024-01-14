@@ -18,8 +18,7 @@ const AppLayout = ({ children }) => {
 }
 
 const Con = styled.div`  
-  width: 100%;   
-  overflow:hidden;
+  width: 100%;    
 `;
 
 export default AppLayout
