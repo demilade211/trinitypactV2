@@ -90,6 +90,9 @@ const Con = styled.section`
     @media (max-width: 1200px) { 
         grid-template-columns: 164px 164px;
     }
+    @media (max-width: 350px) { 
+        grid-template-columns: 100%;
+    }
     .item-con{
         height: 284px;
         border-radius: 30px;

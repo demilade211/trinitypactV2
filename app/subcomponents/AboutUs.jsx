@@ -27,16 +27,16 @@ const AboutUs = () => {
                         and commercial property development to real estate advisory.
                     </p>
                     <OrangeButton>Read More</OrangeButton>
-                    <div className='list-con flex'>
-                        <div className='list m-3'>
+                    <div className='list-con'>
+                        <div className='list'>
                             <p className='number'>10+</p>
                             <p className='title'>Projects</p>
                         </div>
-                        <div className='list m-3'>
+                        <div className='list'>
                             <p className='number'>200+</p>
                             <p className='title'>Clients</p>
                         </div>
-                        <div className='list m-3'>
+                        <div className='list'>
                             <p className='number'>5+</p>
                             <p className='title'>Ratings</p>
                         </div>
@@ -140,8 +140,16 @@ const Right = styled.div`
         }
     }
     .list-con{ 
-        margin-top:20px;
-        .list{
+        width: 100%;
+        margin-top:20px; 
+        display: grid;
+        grid-template-columns: auto auto auto;
+        row-gap: 10px;
+        column-gap: 10px;
+        @media (max-width: 350px) {  
+            grid-template-columns: 1fr 1fr;
+        }
+        .list{ 
             display: flex;
             flex-direction: column;
             justify-content: center;
