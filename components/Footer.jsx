@@ -8,33 +8,33 @@ const Footer = () => {
         <Con>
             <FirstRow>
                 <div className='first'>
-                    <img className='logo' src="/images/components/logo.svg" alt="img" />
+                    <h4>TrinityPact</h4>
                     <p className='first-p'>
                         At Transportco Trucking Company, we're not just about moving freight; we're about moving your business forward. With a relentless commitment to reliability, efficiency, and safety, we've been the go-to partner for businesses in need of top-tier transportation solutions.
                     </p>
-                    <div className='soc flex my-3 items-center'>
+                    {/* <div className='soc flex my-3 items-center'>
                         <div><img className="mr-5 cursor-pointer" src="/images/components/fb.svg" alt="img" /></div>
                         <div><img className="mr-5 cursor-pointer" src="/images/components/insta.svg" alt="img" /> </div>
                         <div><img className="mr-5 cursor-pointer" src="/images/components/twit.svg" alt="img" /> </div>
-                    </div>
+                    </div> */}
                 </div>
                 <div className='second'>
                     <h4>Contact Us</h4>
                     <div className='loc'>
-                        <img src="/images/components/lo.svg" alt="img" />
+                        <img src="/images/components/ficon1.svg" alt="img" />
                         <p>
-                        Block 22 Flat 4 Omole Estate,<br/> Phase 1, Ojodu Lagos
+                            7, Bailey Street, Off Oguntolu Street,<br /> Shomolu, Lagos.
                         </p>
                     </div>
                     <div className='mail'>
-                        <img src="/images/components/msg.svg" alt="img" />
+                        <img src="/images/components/mail.svg" alt="img" />
                         <p>
-                        hello@transportcotrucking.com
+                            trinitypactlimited@gmail.com
 
                         </p>
                     </div>
                     <div className='call'>
-                        <img src="/images/components/tabler_phone-filled.svg" alt="img" />
+                        <img src="/images/components/phone.svg" alt="img" />
                         <p>08034225648, 08025761900</p>
                     </div>
                 </div>
@@ -57,16 +57,15 @@ const Footer = () => {
 const Con = styled.section`  
     width: 100%;      
     padding: 80px 90px 40px 90px;
-    background: #202020;  
+    background:#030303;  
     display: flex;
     flex-direction:column;
     align-items:center;
     @media (max-width: 600px) { 
-        padding: 50px 30px;
+        padding: 50px 10px;
     }
     p{ 
-        color: #C3C3C3;
-        font-family: Roboto;
+        color: #C3C3C3; 
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
@@ -81,6 +80,7 @@ const FirstRow = styled.div`
     width: 80%;    
     display: flex; 
     justify-content:space-between;  
+    margin-bottom:30px;
     @media (max-width: 1200px) { 
         justify-content: center;
         align-items:center;
@@ -98,6 +98,19 @@ const FirstRow = styled.div`
             align-items: center;
             width: 100%;
         } 
+        h4{
+            color: #F58634;  
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%; /* 27px */
+            margin-bottom:10px;
+            text-align:left;
+            text-transform: uppercase;
+            @media (max-width: 1200px) { 
+                text-align: center;
+            }
+        }
         .logo{
             margin-bottom:10px; 
             width: 80%;
@@ -111,9 +124,7 @@ const FirstRow = styled.div`
             align-items: center;
         }
         h4{
-            color: var(--pure-white, #FFF); 
-            /* Body 1/Semi-Bold */
-            font-family: Roboto;
+            color: #F58634;  
             font-size: 18px;
             font-style: normal;
             font-weight: 700;
@@ -141,9 +152,7 @@ const FirstRow = styled.div`
             align-items: center;
         }
         h4{
-            color: var(--pure-white, #FFF); 
-            /* Body 1/Semi-Bold */
-            font-family: Roboto;
+            color: #F58634;  
             font-size: 18px;
             font-style: normal;
             font-weight: 700;
@@ -170,8 +179,7 @@ const FirstRow = styled.div`
                     margin-left:20px;
                 }
                 span{
-                    color: #D434FE;
-                    font-family: Montserrat;
+                    color: #D434FE; 
                     font-size: 12px;
                     font-style: normal;
                     font-weight: 400;
@@ -190,7 +198,7 @@ const ThirdRow = styled.div`
     p{
         text-align:center;
         span{
-            color: #DB0F31;
+            color: #F58634;
         }
     }
 `;

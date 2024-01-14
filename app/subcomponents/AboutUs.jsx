@@ -6,7 +6,7 @@ const AboutUs = () => {
     return (
         <Con>
             <div className='head flex items-center'>
-                <img className='' src="/images/pages/home/icon1.svg" alt="img" />
+                <img className='mr-3' src="/images/pages/home/icon1.svg" alt="img" />
                 <h1>
                     About <span>Us</span>
                 </h1>
@@ -135,6 +135,9 @@ const Right = styled.div`
         font-weight: 400;
         line-height: normal;
         margin:20px 0;
+        @media (max-width: 1200px) {  
+            font-size: 14px;
+        }
     }
     .list-con{ 
         margin-top:20px;

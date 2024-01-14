@@ -7,16 +7,20 @@ import AboutUs from './subcomponents/AboutUs';
 import Service from './subcomponents/Services';
 import CardsSection from './subcomponents/CardsSection';
 import Listings from './subcomponents/Listings';
+import Testimony from './subcomponents/Testimony';
+import Discover from './subcomponents/Discover';
 
 export default function Home() {
   return (
     <AppLayout>
       <Con>
-        <HeroSection/>
-        <AboutUs/>
-        <Service/>
-        <CardsSection/>
-        <Listings/>
+        <HeroSection />
+        <AboutUs />
+        <Service />
+        <CardsSection />
+        <Listings />
+        <Testimony />
+        <Discover/>
       </Con>
     </AppLayout>
 

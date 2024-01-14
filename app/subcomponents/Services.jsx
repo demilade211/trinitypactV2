@@ -10,11 +10,16 @@ const Services = () => {
                     <img src="/images/pages/home/img 2.png" alt="img" />
                 </Left>
                 <Right data-aos="fade-down-right" data-aos-delay="200">
-                    <div className='head flex items-center'>
-                        <img className='' src="/images/pages/home/icon1.svg" alt="img" />
-                        <h1>
-                            Our  <span>Services</span>
-                        </h1>
+                    <div className='head flex justify-between items-center'>
+                        <div className='left flex'>
+                            <img className='mr-3' src="/images/pages/home/icon1.svg" alt="img" />
+                            <h1>
+                                Our  <span>Services</span>
+                            </h1>
+                        </div>
+                        <div className='right'>
+
+                        </div>
                     </div>
                     <p className='para'>
                         At Trinitypact Limited, we are dedicated to providing<br />
@@ -88,14 +93,19 @@ const Right = styled.div`
         width:100%;
         padding:0px;
     } 
-    .head{  
-        margin-bottom:40px; 
-        @media (max-width: 600px) { 
-            img{
-                width: 50%;
+    .head{   
+        .left{
+            margin-bottom:40px; 
+            @media (max-width: 600px) { 
+                img{
+                    width: 50%;
+                } 
             }
-         
         }
+        .right{
+
+        }
+        
     }
     h2{
         color: #F58634;
@@ -116,6 +126,9 @@ const Right = styled.div`
         font-weight: 400;
         line-height: normal;
         margin:20px 0;
+        @media (max-width: 1200px) {  
+            font-size: 14px;
+        }
     }
     .list-con{ 
         margin-top:20px;

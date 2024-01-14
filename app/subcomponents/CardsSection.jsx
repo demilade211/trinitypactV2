@@ -81,8 +81,7 @@ const Con = styled.section`
   }
   .in-con{ 
     position: relative;  
-    z-index: 1;   
-    border:1px solid black;
+    z-index: 1;    
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;

@@ -34,15 +34,15 @@ const Navbar = () => {
                         <img src="/images/components/ham.svg" alt="img" onClick={() => setShowNav(!showNav)} />
                     </div>
                     <ul>
-                        <li onClick={() => Router.push(`/`)}>Home</li>
-                        <li onClick={() => Router.push(`/about`)}>About</li>
-                        <li onClick={() => Router.push(`/services`)}>Services</li>
-                        <li onClick={() => Router.push(`/contact`)}>Contact</li>
-                        <li className="flex items-center">
+                        <li onClick={() => router.push(`/`)}>Home</li>
+                        <li onClick={() => router.push(`/about`)}>About</li>
+                        <li onClick={() => router.push(`/services`)}>Services</li>
+                        <li onClick={() => router.push(`/contact`)}>Contact</li>
+                        {/* <li className="flex items-center">
                             <img className="mr-5 cursor-pointer" src="/images/components/insta.svg" alt="img" />
                             <img className="mr-5 cursor-pointer" src="/images/components/twit.svg" alt="img" />
                             <img className="mr-5 cursor-pointer" src="/images/components/fb.svg" alt="img" />
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             </Bottom>
@@ -119,7 +119,7 @@ const Bottom = styled.div`
         left: 0;
         display: block; /* Change to 'none' when you want to hide it */ 
         border: 0.5px solid rgba(255, 255, 255, 0.04);
-        background: #202020; 
+        background:#030303;
         padding: 20px 50px;
         opacity: 0; /* Start fully transparent */
         transition: 900ms ease-in;
@@ -142,8 +142,7 @@ const Bottom = styled.div`
                 text-align:left;
                 list-style-type:none;
                 margin-bottom:30px;
-                color: #FFF;
-                font-family: Roboto;
+                color: #FFF; 
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
