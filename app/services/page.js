@@ -1,15 +1,15 @@
 'use client'
 
 import styled from 'styled-components';
-import AppLayout from '@/layouts/AppLayout';
-import Title from './subComponents/Title';
+import AppLayout from '@/layouts/AppLayout'; 
 import CardsSection from './subcomponents/CardsSection';
+import Title from './subcomponents/Title';
 
 const Service = () => {
   return (
     <AppLayout>
       <Con>
-        <Title /> 
+        <Title/>
         <CardsSection/>
       </Con>
     </AppLayout>

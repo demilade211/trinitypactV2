@@ -1,7 +1,6 @@
 'use client'
 
-import styled from 'styled-components';
-import AppLayout from '@/layouts/AppLayout';
+import styled from 'styled-components'; 
 
 const Title = () => {
     return (
