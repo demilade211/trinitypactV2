@@ -10,7 +10,10 @@ const Footer = () => {
                 <div className='first'>
                     <h4>TrinityPact</h4>
                     <p className='first-p'>
-                        At Transportco Trucking Company, we're not just about moving freight; we're about moving your business forward. With a relentless commitment to reliability, efficiency, and safety, we've been the go-to partner for businesses in need of top-tier transportation solutions.
+                        TPL Trinitypact Limited is a recognized real estate firm
+                        registered with the Corporate Affairs Commission
+                        in Nigeria. We provide low-cost housing in high-brow areas
+                        to our investors.
                     </p>
                     {/* <div className='soc flex my-3 items-center'>
                         <div><img className="mr-5 cursor-pointer" src="/images/components/fb.svg" alt="img" /></div>
@@ -35,7 +38,7 @@ const Footer = () => {
                     </div>
                     <div className='call'>
                         <img src="/images/components/phone.svg" alt="img" />
-                        <p>08034225648, 08025761900</p>
+                        <p>08060787963, 08025761900</p>
                     </div>
                 </div>
                 <div className='third'>
@@ -48,7 +51,7 @@ const Footer = () => {
 
             </FirstRow>
             <ThirdRow>
-                <p>Copyright © {currentYear} <span>Transportco Trucking Company</span></p>
+                <p>Copyright © {currentYear} <span>TPL Trinitypact Limited</span></p>
             </ThirdRow>
         </Con>
     )
