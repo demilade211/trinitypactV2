@@ -59,7 +59,7 @@ const Tennets = () => {
 const Con = styled.section`  
     width: 100%; 
     padding:60px; 
-    margin-bottom:30px;
+    margin-bottom:20px;
     @media (max-width: 1200px) { 
         padding:30px;
     }  

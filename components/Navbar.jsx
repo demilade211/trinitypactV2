@@ -3,14 +3,15 @@
 import React, { useState } from "react";
 import styled from 'styled-components';
 import Image from 'next/image'
-import { useRouter } from 'next/navigation'
+import { useRouter,usePathname } from 'next/navigation'
 import Router from "next/router"
 
 const Navbar = () => {
     const [showNav, setShowNav] = useState(false);
     const router = useRouter();
+    const pathname = usePathname()
 
-    const isActive = route => router.pathname === route;
+    const isActive = route => pathname === route;
     return (
         <LandingNavbarCon>
             <Bottom>
@@ -22,8 +23,8 @@ const Navbar = () => {
                         <li className={`${isActive("/") && "active"}`} onClick={() => router.push(`/`)}>Home</li>
                         <li className={`${isActive("/about") && "active"}`} onClick={() => router.push(`/about`)}>About Us</li>
                         <li className={`${isActive("/services") && "active"}`} onClick={() => router.push(`/services`)}>Services</li>
-                        <li className={`${isActive("/contact") && "active"}`} onClick={() => router.push(`/contact`)}>Projects</li>
-                        <li className={`${isActive("/contact") && "active"}`} onClick={() => router.push(`/contact`)}>Contact Us</li>
+                        <li className={`${isActive("/projects") && "active"}`} onClick={() => router.push(`/projects`)}>Projects</li>
+                        <li className={`contact ${isActive("/contact") && "active"}`} onClick={() => router.push(`/contact`)}>Contact Us</li>
                     </ul>
                 </nav>
                 <div className='mobile-right'>
@@ -81,6 +82,7 @@ const Bottom = styled.div`
         }
         ul{
             display: flex;
+            align-items: center;
             li{
                 list-style-type:none;
                 margin:0 40px;
@@ -88,17 +90,28 @@ const Bottom = styled.div`
                 text-align: center; 
                 font-size: 18px;
                 font-style: normal;
-                font-weight: 400;
+                font-weight: 700;
                 line-height: normal;
                 cursor: pointer;
                 &:hover {
-                    color: var(--brand-color, #DB0F31); /* Remove background color on hover */  
-                    transition: 500ms ease-in;
+                    border-radius: 10px;
+                    background: #F58634;
+                    color: #FFF; /* Remove background color on hover */ 
+                    padding: 15px 20px; 
+                    transition: 200ms ease-in;
                 } 
+                
+            }
+            .contact{
+                border-radius: 10px;
+                border: 1px solid #F58634;
+                padding: 15px 20px;
             }
             .active{
-                color: var(--brand-color, #DB0F31);
-                font-weight: 600;
+                border-radius: 10px;
+                background: #F58634;
+                color: #FFF; /* Remove background color on hover */ 
+                padding: 15px ; 
             }
         }
     }
@@ -145,8 +158,13 @@ const Bottom = styled.div`
                 color: #F58634; 
                 font-size: 18px;
                 font-style: normal;
-                font-weight: 400;
+                font-weight: 700;
                 line-height: normal;
+            }
+            .contact{
+                border-radius: 10px;
+                border: 1px solid #F58634;
+                padding: 20px 40px;
             }
         }
         @media (max-width: 1200px) { 
