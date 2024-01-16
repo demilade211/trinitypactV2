@@ -31,7 +31,7 @@ const Navbar = () => {
                 </div>
                 <div className={`mobile-nav ${showNav && "active"}`}>
                     <div className="close" onClick={() => setShowNav(false)} >
-                        <img src="/images/components/ham.svg" alt="img" onClick={() => setShowNav(!showNav)} />
+                        <img src="/images/components/close.svg" alt="img" onClick={() => setShowNav(!showNav)} />
                     </div>
                     <ul>
                         <li onClick={() => router.push(`/`)}>Home</li>
@@ -119,7 +119,7 @@ const Bottom = styled.div`
         left: 0;
         display: block; /* Change to 'none' when you want to hide it */ 
         border: 0.5px solid rgba(255, 255, 255, 0.04);
-        background:#030303;
+        background:#E7E7E7;
         padding: 20px 50px;
         opacity: 0; /* Start fully transparent */
         transition: 900ms ease-in;
@@ -142,8 +142,8 @@ const Bottom = styled.div`
                 text-align:left;
                 list-style-type:none;
                 margin-bottom:30px;
-                color: #FFF; 
-                font-size: 16px;
+                color: #F58634; 
+                font-size: 18px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: normal;
