@@ -38,6 +38,7 @@ const Navbar = () => {
                         <li onClick={() => router.push(`/`)}>Home</li>
                         <li onClick={() => router.push(`/about`)}>About</li>
                         <li onClick={() => router.push(`/services`)}>Services</li>
+                        <li onClick={() => router.push(`/projects`)}>Projects</li>
                         <li onClick={() => router.push(`/contact`)}>Contact</li>
                         {/* <li className="flex items-center">
                             <img className="mr-5 cursor-pointer" src="/images/components/insta.svg" alt="img" />
