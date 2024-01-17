@@ -1,8 +1,12 @@
 'use client'
 import React from 'react'
 import styled from 'styled-components';
+import { useRouter,usePathname } from 'next/navigation'
 
 const HeroSection = () => {
+
+    const router = useRouter();
+
     return (
         <Con>
             <div className='in-hero'>
@@ -13,7 +17,7 @@ const HeroSection = () => {
                     properties for sale and rent in over 12+<br/>
                      Countries
                 </p>
-                <RedButton >Learn More</RedButton>
+                <RedButton onClick={() => router.push(`/about`)}>Learn More</RedButton>
             </div>
         </Con>
     )
@@ -21,7 +25,7 @@ const HeroSection = () => {
 
 const Con = styled.section`  
     width: 100%;  
-    background: url('/images/pages/home/truck1.jpg') center no-repeat;
+    background: url('/images/pages/home/truck1.png') center no-repeat;
     background-size: cover;  
     position: relative;
     &::after{
@@ -98,7 +102,7 @@ const RedButton = styled.button`
     }
     &:hover {
         background: none; /* Remove background color on hover */
-        border: 2px solid #DB0F31; /* Add border on hover */
+        border: 2px solid #F58634; /* Add border on hover */
         color: #FFF; /* Text color on hover */
         transition: 200ms ease-in;
     } 

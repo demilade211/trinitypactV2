@@ -21,7 +21,7 @@ const Title = () => {
 const Con = styled.section`  
     width: 100%;  
     height: 500px;
-    background: url('/images/pages/home/truck1.jpg') center no-repeat;
+    background: url('/images/pages/home/cimg1.png') center no-repeat;
     background-size: cover;  
     position: relative;
     &::after{

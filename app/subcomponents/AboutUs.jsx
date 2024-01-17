@@ -1,8 +1,12 @@
 'use client'
 import React from 'react'
 import styled from 'styled-components';
+import { useRouter,usePathname } from 'next/navigation'
 
 const AboutUs = () => {
+
+    const router = useRouter();
+
     return (
         <Con>
             <div className='head flex items-center'>
@@ -26,7 +30,7 @@ const AboutUs = () => {
                         property development and investment, offering services ranging from residential
                         and commercial property development to real estate advisory.
                     </p>
-                    <OrangeButton>Read More</OrangeButton>
+                    <OrangeButton onClick={() => router.push(`/about`)}>Read More</OrangeButton>
                     <div className='list-con'>
                         <div className='list'>
                             <p className='number'>10+</p>
@@ -37,7 +41,7 @@ const AboutUs = () => {
                             <p className='title'>Clients</p>
                         </div>
                         <div className='list'>
-                            <p className='number'>5+</p>
+                            <p className='number flex items-center'>5<img src="/images/pages/home/star.svg" alt="img" /></p>
                             <p className='title'>Ratings</p>
                         </div>
                     </div>
@@ -170,6 +174,11 @@ const Right = styled.div`
                 @media (max-width: 1200px) {  
                     font-size: 20px;
                 }
+                img{
+                    width: 50%;
+                    position:relative;
+                    bottom: 3px;
+                }
             }
             .title{
                 color: #000;
@@ -210,8 +219,8 @@ const OrangeButton = styled.button`
     }
     &:hover {
         background: none; /* Remove background color on hover */
-        border: 2px solid #DB0F31; /* Add border on hover */
-        color: #FFF; /* Text color on hover */
+        border: 2px solid #F58634; /* Add border on hover */
+        color:  black; /* Text color on hover */
         transition: 200ms ease-in;
     } 
 `;

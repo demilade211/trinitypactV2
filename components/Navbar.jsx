@@ -15,7 +15,7 @@ const Navbar = () => {
     return (
         <LandingNavbarCon>
             <Bottom>
-                <div className="logo">
+                <div className="logo" onClick={() => router.push(`/`)}>
                     <img src="/images/components/logo.png" alt="img" />
                 </div>
                 <nav>

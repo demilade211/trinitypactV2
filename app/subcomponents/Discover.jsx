@@ -17,7 +17,7 @@ const Discover = () => {
 
 const Con = styled.section`  
     width: 100%;  
-    background: url('/images/pages/home/cimg.jpg') center no-repeat;
+    background: url('/images/pages/home/cimg1.png') center no-repeat;
     background-size: cover;  
     background-attachment:fixed;
     position: relative;
@@ -86,7 +86,7 @@ const RedButton = styled.button`
     }
     &:hover {
         background: none; /* Remove background color on hover */
-        border: 2px solid #DB0F31; /* Add border on hover */
+        border: 2px solid #F58634; /* Add border on hover */
         color: #FFF; /* Text color on hover */
         transition: 200ms ease-in;
     } 

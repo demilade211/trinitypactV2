@@ -73,7 +73,7 @@ const Con = styled.section`
     display: flex;
     flex-direction:column;
     padding: 50px 90px;
-    background: url('/images/pages/home/cimg.jpg');
+    background: url('/images/pages/home/cimg.png');
     background-position: center center;
     background-size: cover;
     position: relative; 
