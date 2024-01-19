@@ -12,10 +12,9 @@ const HeroSection = () => {
             <div className='in-hero'>
                 <h1>Best - Value</h1>
                 <h2>Deals Now in Your City</h2>
-                <p>Real estate properties for sale and Uop<br/>
-                    rent in over 12+ Countries.Real estate <br/>
-                    properties for sale and rent in over 12+<br/>
-                     Countries
+                <p>Providing exceptional real estate services 
+                    that cater to your unique needs and aspirations.
+                    we strive to guide you through every step of your real estate journey.
                 </p>
                 <RedButton onClick={() => router.push(`/about`)}>Learn More</RedButton>
             </div>

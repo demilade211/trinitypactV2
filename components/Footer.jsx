@@ -8,7 +8,7 @@ const Footer = () => {
         <Con>
             <FirstRow>
                 <div className='first'>
-                    <h4>TrinityPact</h4>
+                    <h4>TPL TrinityPact</h4>
                     <p className='first-p'>
                         TPL Trinitypact Limited is a recognized real estate firm
                         registered with the Corporate Affairs Commission

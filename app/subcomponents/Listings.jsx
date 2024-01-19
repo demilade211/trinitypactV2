@@ -10,7 +10,7 @@ const Listings = () => {
                 <div className='left flex mr-2'>
                     <img className='mr-3' src="/images/pages/home/icon1.svg" alt="img" />
                     <h1>
-                        Our  <span>Listing</span>
+                        Our  <span>Projects</span>
                     </h1>
                 </div>
                 <div className='right flex'>
@@ -20,24 +20,24 @@ const Listings = () => {
             </div>
             <div className='flex-con'>
                 <div className='con'>
-                    <img className='' src="/images/pages/home/img3.png" alt="img" />
+                    <img className='' src="/images/pages/home/l1.jpeg" alt="img" />
                 </div>
                 <div className='con'>
-                    <img className='' src="/images/pages/home/img4.png" alt="img" />
+                    <img className='' src="/images/pages/home/l2.jpeg" alt="img" />
                 </div>
                 <div className='con'>
-                    <img className='' src="/images/pages/home/img5.png" alt="img" />
+                    <img className='' src="/images/pages/home/l3.jpeg" alt="img" />
                 </div>
             </div>
             <div className='mobile-flex-con'>
                 {active === 0 && <div className='con'>
-                    <img className='' src="/images/pages/home/img3.png" alt="img" />
+                    <img className='' src="/images/pages/home/l1.jpeg" alt="img" />
                 </div>}
                 {active === 1 && <div className='con'>
-                    <img className='' src="/images/pages/home/img4.png" alt="img" />
+                    <img className='' src="/images/pages/home/l2.jpeg" alt="img" />
                 </div>}
                 {active === 2 && <div className='con'>
-                    <img className='' src="/images/pages/home/img5.png" alt="img" />
+                    <img className='' src="/images/pages/home/l3.jpeg" alt="img" />
                 </div>}
             </div>
             <div className='active-con'>
@@ -105,6 +105,7 @@ const Con = styled.section`
             img{
                 width: 100%;
                 height:100%;
+                border-radius: 30px;
             }
         }
     } 
@@ -126,6 +127,7 @@ const Con = styled.section`
             img{
                 width: 100%;
                 height:100%;
+                border-radius: 30px;
             }
         }
     } 

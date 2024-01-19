@@ -6,7 +6,7 @@ const Discover = () => {
     return (
         <Con>
             <div className='in-hero'>
-                <h1>Discover the <span>Trinitypact</span> difference and let us
+                <h1>Discover the <span>TPL Trinitypact</span> difference and let us
                     guide you on your <span>real estate journey.</span>
                 </h1>
                 <RedButton onClick={() => Router.push(`/contact`)}>Contact Us today to get started</RedButton>

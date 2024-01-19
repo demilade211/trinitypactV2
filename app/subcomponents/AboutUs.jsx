@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import styled from 'styled-components';
-import { useRouter,usePathname } from 'next/navigation'
+import { useRouter, usePathname } from 'next/navigation'
 
 const AboutUs = () => {
 
@@ -21,11 +21,11 @@ const AboutUs = () => {
                 </Left>
                 <Right data-aos="fade-down-right" data-aos-delay="200">
                     <h2>
-                        Trinitypact Limited <span>: Leaders in</span><br />
+                        TPL Trinitypact Limited <span>: Leaders in</span><br />
                         Property Development
                     </h2>
                     <p className='para'>
-                        Trinitypact Limited is a dynamic real estate development company based in Lagos,
+                        TPL Trinitypact Limited is a dynamic real estate development company based in Lagos,
                         Nigeria, with over three years of experience in the industry. We specialize in
                         property development and investment, offering services ranging from residential
                         and commercial property development to real estate advisory.

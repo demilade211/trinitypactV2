@@ -10,7 +10,7 @@ const CardsSection = () => {
                     <div className='img-con mb-3'><img src="/images/pages/home/icon3.svg" alt="img" /></div>
                     <h1 className='count'>Real Estate Development</h1>
                     <p>
-                        TPL specializes in visionary real estate development, bringing innovative concepts
+                        TPL Trinitypact specializes in visionary real estate development, bringing innovative concepts
                         to life. Our team is dedicated to creating sustainable and thriving communities that
                         redefine the standard of living.
                     </p>
@@ -19,7 +19,7 @@ const CardsSection = () => {
                     <div className='img-con mb-3'><img src="/images/pages/home/icon3.svg" alt="img" /></div>
                     <h1 className='count'>Project Management</h1>
                     <p>
-                        At TPL, we excel in project management, ensuring seamless execution from inception to
+                        At TPL Trinitypact, we excel in project management, ensuring seamless execution from inception to
                         completion. Our experienced professionals navigate complexities, optimize resources,
                         and deliver projects on time and within budget.
                     </p>
@@ -28,7 +28,7 @@ const CardsSection = () => {
                     <div className='img-con mb-3'><img src="/images/pages/home/icon3.svg" alt="img" /></div>
                     <h1 className='count'>Property Management</h1>
                     <p>
-                        Trust TPL to handle your property with care and expertise. Our property management
+                        Trust TPL Trinitypact to handle your property with care and expertise. Our property management
                         services encompass everything from tenant relations to maintenance, ensuring the
                         optimal performance and value of your real estate assets.
                     </p>
@@ -37,9 +37,9 @@ const CardsSection = () => {
                     <div className='img-con mb-3'><img src="/images/pages/home/icon3.svg" alt="img" /></div>
                     <h1 className='count'>Constructions</h1>
                     <p>
-                        Trust TPL to handle your property with care and expertise. Our property management
-                        services encompass everything from tenant relations to maintenance, ensuring the '
-                        optimal performance and value of your real estate assets.
+                        TPL Trinitypact is a leader in construction, delivering high-quality projects with precision
+                        and efficiency. From groundbreaking to final touches, our skilled team manages
+                        every aspect, emphasizing safety, quality, and timely completion
                     </p>
                 </div>
 

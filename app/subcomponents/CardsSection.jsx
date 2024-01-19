@@ -88,7 +88,7 @@ const Con = styled.section`
     row-gap: 40px;
     column-gap:40px;
     @media (max-width: 1200px) { 
-        grid-template-columns: 164px 164px;
+        grid-template-columns: 157px 157px;
     }
     @media (max-width: 350px) { 
         grid-template-columns: 100%;
@@ -99,7 +99,8 @@ const Con = styled.section`
         background: #FFF;
         padding: 20px;
         @media (max-width: 1200px) { 
-            height: 181px;
+            padding: 10px;
+            height: 170px;
         }
         .img-con{
             @media (max-width: 1200px) { 

@@ -8,13 +8,13 @@ const Listings = () => {
         <Con> 
             <div className='flex-con'>
                 <div className='con'>
-                    <img className='' src="/images/pages/home/img3.png" alt="img" />
+                    <img className='' src="/images/pages/home/l1.jpeg" alt="img" />
                 </div>
                 <div className='con'>
-                    <img className='' src="/images/pages/home/img4.png" alt="img" />
+                    <img className='' src="/images/pages/home/l2.jpeg" alt="img" />
                 </div>
                 <div className='con'>
-                    <img className='' src="/images/pages/home/img5.png" alt="img" />
+                    <img className='' src="/images/pages/home/l3.jpeg" alt="img" />
                 </div>
             </div> 
 
@@ -75,49 +75,10 @@ const Con = styled.section`
             img{
                 width: 100%;
                 height:100%;
+                border-radius: 30px;
             }
         }
-    } 
-    .mobile-flex-con{
-        display:none;   
-        grid-template-columns:349px;
-        justify-content: center;
-        column-gap: 20px;
-        @media (max-width: 1200px) {  
-            display: grid;
-        } 
-        @media (max-width: 390px) {  
-            grid-template-columns:100%;
-        } 
-        .con{ 
-            height: 490px;
-            border-radius: 30px;
-            background: linear-gradient(0deg, rgba(234, 234, 234, 0.10) 0%, rgba(234, 234, 234, 0.10) 100%), url(<path-to-image>), lightgray 50% / cover no-repeat;
-            img{
-                width: 100%;
-                height:100%;
-            }
-        }
-    } 
-    .active-con{
-        width: 100%;
-        display: none;
-        justify-content: center;
-        margin:10px 0;
-        @media (max-width: 1200px) { 
-            display: flex;
-        }
-        .dot{
-            width: 13px;
-            height: 13px;
-            border-radius:100%;
-            background-color:#D9D9D9;
-            margin-right:10px;
-        }
-        .active{
-            background-color:#FF9445;
-        }
-    }
+    }   
 `;
 
 const CountBtn = styled.button`  

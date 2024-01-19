@@ -11,11 +11,11 @@ const Mission = () => {
             <div className='head flex items-center'>
                 <img className='mr-3' src="/images/pages/home/icon1.svg" alt="img" />
                 <h1>
-                    Trinity<span>Pact</span>
+                    TPL Trinity<span>Pact</span>
                 </h1>
             </div>
             <p className='para'>
-                Trinitypact Limited is a reputable real estate development entity in Lagos,
+                TPL Trinitypact Limited is a reputable real estate development entity in Lagos,
                 Nigeria, focused on providing enticing investment opportunities to investors.
                 Our core identity revolves around the construction of superior properties
                 capable of generating considerable returns over a 15-year span, while upholding
@@ -39,7 +39,7 @@ const Mission = () => {
                         <p>
                             To be a leading force in the real estate industry,
                             pioneering innovative and sustainable solutions
-                            that transform landscapes and enrich communities. 
+                            that transform landscapes and enrich communities.
                         </p>
                     </div>
                 </div>

@@ -22,11 +22,11 @@ const Services = () => {
                         </div>
                     </div>
                     <p className='para'>
-                        At Trinitypact Limited, we are dedicated to providing<br />
-                        exceptional real estate services that cater to your unique<br />
-                        needs and aspirations. With our extensive knowledge of<br />
-                        the local market and a team of experienced professionals,<br />
-                        we strive to guide you through every step of your real<br />
+                        At TPL Trinitypact Limited, we are dedicated to providing 
+                        exceptional real estate services that cater to your unique 
+                        needs and aspirations. With our extensive knowledge of 
+                        the local market and a team of experienced professionals, 
+                        we strive to guide you through every step of your real 
                         estate journey.
                     </p>
                 </Right>

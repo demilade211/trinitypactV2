@@ -6,7 +6,7 @@ const Why = () => {
   return (
     <Con>
       <div className='mission-con'>
-        <h2>Why Choose<span> Trinitypact?</span></h2>
+        <h2>Why Choose<span> TPL?</span></h2>
         <div>
           <div className='row'>
             <h3>1. GlobalPresence</h3>
