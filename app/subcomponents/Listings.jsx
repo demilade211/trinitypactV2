@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components';
 
 const Listings = () => {
-    const [active, setActive] = useState(0) 
+    const [active, setActive] = useState(0)
     return (
         <Con>
             <div className='head flex justify-between items-center'>
@@ -37,7 +37,7 @@ const Listings = () => {
                     <img className='' src="/images/pages/home/l2.jpeg" alt="img" />
                 </div>}
                 {active === 2 && <div className='con'>
-                    <img className='' src="/images/pages/home/l3.jpeg" alt="img" />
+                    <img className='' src="/images/pages/home/img4.png" alt="img" />
                 </div>}
             </div>
             <div className='active-con'>
