@@ -26,7 +26,7 @@ const Listings = () => {
                     <img className='' src="/images/pages/home/l2.jpeg" alt="img" />
                 </div>
                 <div className='con'>
-                    <img className='' src="/images/pages/home/l3.jpeg" alt="img" />
+                    <img className='' src="/images/pages/home/img4.png" alt="img" />
                 </div>
             </div>
             <div className='mobile-flex-con'>

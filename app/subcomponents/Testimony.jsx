@@ -15,10 +15,11 @@ const Testimony = () => {
                 <div className='con'>
                     <h2>“Leap of Faith....”</h2>
                     <p className='testi'>
-                        It was a leap of faith trusting Invicta Homes with my real estate investment,
-                        and they lived up to the expectation. The entire process was seamless,
-                        especially since I was transacting with them out of state. Definitely a 10/10
-                        experience. I highly recommend them.
+                        Taking a leap of faith with this real estate website was the best decision of my
+                        life. From the initial property search to the final closing, the seamless and
+                        user-friendly experience exceeded my expectations. The platform not only helped me
+                        find my dream home but also made the entire journey a joy. Kudos to the team for
+                        creating a platform that turns dreams into reality!
                     </p>
                     <div className='outer flex justify-end'>
                         <div className='inner flex items-center'>
@@ -32,10 +33,11 @@ const Testimony = () => {
                 <div className='con'>
                     <h2>“Was the best decision..”</h2>
                     <p className='testi'>
-                        It was a leap of faith trusting Invicta Homes with my real estate investment,
-                        and they lived up to the expectation. The entire process was seamless,
-                        especially since I was transacting with them out of state. Definitely
-                        a 10/10 experience. I highly recommend them.
+                        Choosing this real estate website for our property needs was undeniably the best
+                        decision we made. The attention to detail, user-centric design, and comprehensive
+                        property listings made the entire process a breeze. The commitment to excellence
+                        and personalized service showcased by the team truly sets them apart. We are now
+                        proud homeowners, all thanks to this exceptional platform.
                     </p>
                     <div className='outer flex justify-end'>
                         <div className='inner flex items-center'>
@@ -49,10 +51,12 @@ const Testimony = () => {
                 <div className='con'>
                     <h2>“100% Delivery rate....”</h2>
                     <p className='testi'>
-                        It was a leap of faith trusting Invicta Homes with my real estate investment,
-                        and they lived up to the expectation. The entire process was seamless,
-                        especially since I was transacting with them out of state. Definitely
-                        a 10/10 experience. I highly recommend them.
+                        We were promised a 100% delivery rate, and this real estate website didn't
+                        disappoint. From the moment we engaged with the platform to the successful
+                        acquisition of our property, every commitment was met with precision.
+                        The transparency, reliability, and dedication of the team ensured a smooth
+                        and stress-free experience. If you're looking for a platform that delivers
+                        on its promises, this is it!
                     </p>
                     <div className='outer flex justify-end'>
                         <div className='inner flex items-center'>

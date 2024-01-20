@@ -25,10 +25,13 @@ const AboutUs = () => {
                         Property Development
                     </h2>
                     <p className='para'>
-                        TPL Trinitypact Limited is a dynamic real estate development company based in Lagos,
-                        Nigeria, with over three years of experience in the industry. We specialize in
-                        property development and investment, offering services ranging from residential
-                        and commercial property development to real estate advisory.
+                        Welcome to TPL Trinitypact Limited, a dynamic real estate development company
+                        rooted in the vibrant city of Lagos, Nigeria. With a rich history spanning over
+                        four years, we specialize in the art of property development and investment.
+                        From crafting distinctive residential spaces to shaping commercial landscapes,
+                        TPL Trinitypact Limited is your trusted partner in the world of real estate.
+                        Our expertise extends beyond construction, as we provide valuable real estate
+                        advisory services, ensuring a comprehensive approach to your property journey.
                     </p>
                     <OrangeButton onClick={() => router.push(`/about`)}>Read More</OrangeButton>
                     <div className='list-con'>

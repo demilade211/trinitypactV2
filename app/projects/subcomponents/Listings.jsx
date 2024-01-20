@@ -3,9 +3,9 @@ import React, { useState } from 'react'
 import styled from 'styled-components';
 
 const Listings = () => {
-    const [active, setActive] = useState(0) 
+    const [active, setActive] = useState(0)
     return (
-        <Con> 
+        <Con>
             <div className='flex-con'>
                 <div className='con'>
                     <img className='' src="/images/pages/home/l1.jpeg" alt="img" />
@@ -14,9 +14,9 @@ const Listings = () => {
                     <img className='' src="/images/pages/home/l2.jpeg" alt="img" />
                 </div>
                 <div className='con'>
-                    <img className='' src="/images/pages/home/l3.jpeg" alt="img" />
+                    <img className='' src="/images/pages/home/img4.png" alt="img" />
                 </div>
-            </div> 
+            </div>
 
         </Con>
     )
