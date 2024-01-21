@@ -38,7 +38,7 @@ const Footer = () => {
                     </div>
                     <div className='call'>
                         <img src="/images/components/phone.svg" alt="img" />
-                        <p>08060787963, 08025761900</p>
+                        <p>+234 806 078 7963, +234 802 143 1957</p>
                     </div>
                 </div>
                 <div className='third'>

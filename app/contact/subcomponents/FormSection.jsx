@@ -40,8 +40,8 @@ const FormSection = () => {
                         <div className='det'>
                             <h2>Call us today</h2>
                             <p>
-                                Local: 08060787963<br />
-                                Mobile: 08025761900
+                                Local: +234 806 078 7963<br />
+                                Mobile: +234 802 143 1957
                             </p>
                         </div>
                     </div>
