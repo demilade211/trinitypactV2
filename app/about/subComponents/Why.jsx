@@ -18,7 +18,7 @@ const Why = () => {
           <div className='row'>
             <h3>2. Innovative Solution</h3>
             <p>
-              TPL stand out for its commitment to innovation. they continuously adopt and implement
+              TPL stand out for its commitment to innovation. They continuously adopt and implement
               cutting-edge approaches, it could be a significant advantage for clients seeking
               forward-thinking solutions.
             </p>

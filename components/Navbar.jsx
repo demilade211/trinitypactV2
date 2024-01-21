@@ -72,6 +72,7 @@ const Bottom = styled.div`
     .logo{
         width: 75px;
         height: 75px; 
+        cursor: pointer;
         img{
             width: 100%;
             height: 100%;

@@ -25,7 +25,7 @@ const Testimony = () => {
                         <div className='inner flex items-center'>
                             <p className='name mr-2'>Ugochukwu Eze</p>
                             <div className='img-con'>
-                                <img className='mr-5' src="/images/pages/home/pic.png" alt="img" />
+                                <h4>UE</h4>
                             </div>
                         </div>
                     </div>
@@ -43,7 +43,7 @@ const Testimony = () => {
                         <div className='inner flex items-center'>
                             <p className='name mr-2'>Ryan Daniels Eze</p>
                             <div className='img-con'>
-                                <img className='mr-5' src="/images/pages/home/pic.png" alt="img" />
+                                <h4>RD</h4>
                             </div>
                         </div>
                     </div>
@@ -62,7 +62,7 @@ const Testimony = () => {
                         <div className='inner flex items-center'>
                             <p className='name mr-2'>Tolani Oluwabola</p>
                             <div className='img-con'>
-                                <img className='mr-5' src="/images/pages/home/pic.png" alt="img" />
+                                <h4>TO</h4>
                             </div>
                         </div>
                     </div>
@@ -164,11 +164,17 @@ const Con = styled.section`
                         line-height: normal;
                     }
                     .img-con{ 
-                        width: 59px;
-                        height: 59px;
-                        img{
-                            width: 100%;
-                            height: 100%;
+                        width: 50px;
+                        height: 50px;
+                        border-radius:100%;
+                        border: 1px solid black;
+                        background-color: black;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        h4{
+                            color: white;
+                            font-weight:500;
                         }
                     }
                 }

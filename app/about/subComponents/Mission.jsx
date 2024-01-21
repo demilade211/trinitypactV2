@@ -25,6 +25,14 @@ const Mission = () => {
                 <h2>Mission <span>&</span> Vision</h2>
                 <div>
                     <div className='row'>
+                        <h3>Our Vision</h3>
+                        <p>
+                            To be a leading force in the real estate industry,
+                            pioneering innovative and sustainable solutions
+                            that transform landscapes and enrich communities.
+                        </p>
+                    </div>
+                    <div className='row'>
                         <h3>Our  Mission</h3>
                         <p>Empower individuals and businesses to achieve
                             their dreams by providing exceptional real
@@ -32,14 +40,6 @@ const Mission = () => {
                             every aspect of our operations, from property
                             development to customer service, fostering
                             trust and long-term relationships.
-                        </p>
-                    </div>
-                    <div className='row'>
-                        <h3>Our Vission</h3>
-                        <p>
-                            To be a leading force in the real estate industry,
-                            pioneering innovative and sustainable solutions
-                            that transform landscapes and enrich communities.
                         </p>
                     </div>
                 </div>
