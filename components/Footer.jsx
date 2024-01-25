@@ -15,11 +15,10 @@ const Footer = () => {
                         in Nigeria. We provide low-cost housing in high-brow areas
                         to our investors.
                     </p>
-                    {/* <div className='soc flex my-3 items-center'>
-                        <div><img className="mr-5 cursor-pointer" src="/images/components/fb.svg" alt="img" /></div>
-                        <div><img className="mr-5 cursor-pointer" src="/images/components/insta.svg" alt="img" /> </div>
-                        <div><img className="mr-5 cursor-pointer" src="/images/components/twit.svg" alt="img" /> </div>
-                    </div> */}
+                    <div className='soc flex my-3 items-center'>
+                        <a href='https://www.facebook.com/profile.php?id=100071851962525&sfnsn=scwspwa&mibextid=RUbZ1f'><img className="mr-5 cursor-pointer" src="/images/components/fb.svg" alt="img" /></a>
+                        <a href='https://www.instagram.com/trinitypact1?utm_source=qr&igsh=ZHV0eGhiaWpnZXU='><img className="mr-5 cursor-pointer" src="/images/components/insta.svg" alt="img" /> </a>
+                    </div>
                 </div>
                 <div className='second'>
                     <h4>Contact Us</h4>

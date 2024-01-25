@@ -22,7 +22,7 @@ const Mission = () => {
                 principles of sustainability and environmental mindfulness.
             </p>
             <div className='mission-con'>
-                <h2>Mission <span>&</span> Vision</h2>
+                <h2>Vision <span>&</span> Mission</h2>
                 <div>
                     <div className='row'>
                         <h3>Our Vision</h3>
