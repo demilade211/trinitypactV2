@@ -1,32 +1,24 @@
-'use client'
-
-import styled from 'styled-components';
-import AppLayout from '@/layouts/AppLayout';
-import HeroSection from './subcomponents/HeroSection';
-import AboutUs from './subcomponents/AboutUs';
-import Service from './subcomponents/Services';
-import CardsSection from './subcomponents/CardsSection';
-import Listings from './subcomponents/Listings';
-import Testimony from './subcomponents/Testimony';
-import Discover from './subcomponents/Discover';
+import LandingShell from '@/components/landing/LandingShell'
+import Hero from './subcomponents/Hero'
+import Intro from './subcomponents/Intro'
+import FeaturedProjects from './subcomponents/FeaturedProjects'
+import Categories from './subcomponents/Categories'
+import Vision from './subcomponents/Vision'
+import Presence from './subcomponents/Presence'
+import ServicesGrid from './subcomponents/ServicesGrid'
+import Closing from './subcomponents/Closing'
 
 export default function Home() {
   return (
-    <AppLayout>
-      <Con>
-        <HeroSection />
-        <AboutUs />
-        <Service />
-        <CardsSection />
-        <Listings />
-        <Testimony />
-        <Discover/>
-      </Con>
-    </AppLayout>
-
+    <LandingShell>
+      <Hero />
+      <Intro />
+      <FeaturedProjects />
+      <Categories />
+      <Vision />
+      <Presence />
+      <ServicesGrid />
+      <Closing />
+    </LandingShell>
   )
 }
-
-const Con = styled.div`  
-  width: 100%;    
-`;

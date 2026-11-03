@@ -10,8 +10,15 @@
 
 html {
   scroll-behavior: smooth;
-} 
+}
 
-body { 
-   font-family: 'Nunito', sans-serif;
+/* Lenis handles smoothing itself. */
+html.lenis {
+  scroll-behavior: auto;
+}
+
+/* Page ground shows during overscroll; matches LandingShell's --bg. */
+body {
+  background: #e4e5df;
+  font-family: var(--font-sans), 'Helvetica Neue', Arial, sans-serif;
 }

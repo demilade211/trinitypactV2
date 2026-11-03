@@ -1,24 +1,37 @@
-'use client'
+import LandingShell from '@/components/landing/LandingShell'
+import PageHero from '@/components/landing/PageHero'
+import Closing from '../subcomponents/Closing'
+import Gallery from './subcomponents/Gallery'
+import StatsBand from './subcomponents/StatsBand'
 
-import styled from 'styled-components';
-import AppLayout from '@/layouts/AppLayout';
-import Title from './subcomponents/Title';
-import Listings from './subcomponents/Listings';
-
-const Projects = () => {
-    return (
-        <AppLayout>
-            <Con>
-                <Title /> 
-                <Listings/>
-            </Con>
-        </AppLayout>
-    )
+export const metadata = {
+  title: 'Projects',
+  description:
+    'Residential developments, completed residences and design concepts by TPL Trinitypact Limited in Lagos, Nigeria.',
 }
 
-const Con = styled.div`  
-  width: 100%;    
-`;
-
+const Projects = () => {
+  return (
+    <LandingShell>
+      <PageHero
+        eyebrow='Our Projects'
+        title={
+          <>
+            Distinctive Spaces,
+            <br />
+            Built with Purpose.
+          </>
+        }
+        lede='Residential developments, completed residences and design concepts — a selection of the work behind TPL Trinitypact.'
+        src='/images/pages/home/img1.png'
+        alt='Contemporary house entrance with timber cladding and a wide driveway'
+        objectPosition='50% 40%'
+      />
+      <Gallery />
+      <StatsBand />
+      <Closing />
+    </LandingShell>
+  )
+}
 
 export default Projects
