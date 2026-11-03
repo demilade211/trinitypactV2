@@ -15,9 +15,9 @@ const PageHero = ({ eyebrow, title, lede, src, alt, objectPosition = '50% 50%' }
       gsap.matchMedia().add(MOTION_OK, () => {
         gsap.from('.media', { scale: 1.14, duration: 2.2, ease: 'power3.out' })
         gsap.set('[data-preload]', { autoAlpha: 1 })
-        gsap.from('[data-eyebrow]', { autoAlpha: 0, y: 14, duration: 0.9, delay: 0.25, ease: 'power3.out' })
-        riseLines('.title', { delay: 0.35, duration: 1.3 })
-        gsap.from('.lede', { autoAlpha: 0, y: 24, duration: 1.1, delay: 0.8, ease: 'power3.out' })
+        gsap.from('[data-eyebrow]', { autoAlpha: 0, y: 14, duration: 0.9, delay: 0.05, ease: 'power3.out' })
+        riseLines('.title', { delay: 0.1, duration: 1.2 })
+        gsap.from('.lede', { autoAlpha: 0, y: 24, duration: 1.1, delay: 0.45, ease: 'power3.out' })
       })
     },
     { scope: ref }
@@ -26,7 +26,7 @@ const PageHero = ({ eyebrow, title, lede, src, alt, objectPosition = '50% 50%' }
   return (
     <Section ref={ref}>
       <div className='media'>
-        <Image src={src} alt={alt} fill priority sizes='100vw' style={{ objectPosition }} />
+        <Image src={src} alt={alt} fill loading='eager' fetchPriority='high' sizes='100vw' style={{ objectPosition }} />
       </div>
       <div className='shade' />
       <div className='content'>

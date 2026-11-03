@@ -130,6 +130,34 @@ change.
     hidden at 1440 and 390 widths. Form validation and submit flow tested.
     All five page titles are correct.
 
+- **2026-11-03: Next.js 16 upgrade + SEO** (branch `staging`).
+  - Upgraded to Next 16.4.4, React / React DOM 19.3.1 and
+    styled-components 6.6.0. Builds with Turbopack.
+  - Next 16 follow-ups:
+    - Replaced the deprecated `priority` image prop with
+      `loading='eager'` + `fetchPriority='high'`.
+    - Added `data-scroll-behavior='smooth'` on `<html>`.
+    - Removed the `lint` script, since `next lint` no longer exists.
+    - Added `engines.node >= 20.9`.
+    - Moved the favicon to `app/icon.png` + `app/apple-icon.png`.
+  - SEO for `https://www.tpltrinitypact.com` (see the SEO section in
+    `architecture.md`):
+    - `metadataBase`, per-page titles, descriptions and canonicals.
+    - Open Graph and Twitter cards with branded per-page share images.
+    - `robots.txt`, `sitemap.xml` (with images) and a web manifest.
+    - JSON-LD: RealEstateAgent, WebSite, page types, CEO Person,
+      Services ItemList and breadcrumbs.
+    - A branded 404, the non-www → www 308 redirect, AVIF/WebP images,
+      and env-based search-console verification.
+  - Converted the 12.6 MB `img1.png` and 7.4 MB `cimg1.png` to about 1 MB
+    JPEGs. SplitText now uses `aria: 'none'` (fixes invalid aria-labels).
+    Hero entrance delays were shortened for a faster LCP.
+  - Lighthouse (mobile, production build): SEO 100, Best Practices 100,
+    and Accessibility 100 on four pages (Contact 96, from a contrast
+    sample taken mid-fade-in). Performance 86–95, CLS 0 everywhere.
+  - `npm audit`: 0 production vulnerabilities. 3 moderate ones remain in
+    Tailwind's build-time `glob` chain.
+
 ## In Progress
 
 - None.
@@ -151,7 +179,18 @@ change.
   photos of TPL developments when available.
 - **Remove Tailwind**: no utility classes remain. Swap `@tailwind base`
   for an equivalent minimal reset, then drop `tailwindcss` and
-  `tailwind.config.js`.
+  `tailwind.config.js`. This also clears the remaining `npm audit` items.
+- **Go-live SEO checklist** (needs account access):
+  - Point `tpltrinitypact.com` and `www` DNS at the host, with HTTPS.
+  - Verify the domain in Google Search Console and Bing Webmaster Tools.
+    Set `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` /
+    `NEXT_PUBLIC_BING_SITE_VERIFICATION`, then submit
+    `/sitemap.xml`.
+  - Create or claim a Google Business Profile for the Shomolu office, with
+    the address, phones and hours matching `SITE`.
+  - Validate the JSON-LD with Google's Rich Results Test on the live URLs.
+- **Project data for SEO**: once real project names and locations
+  exist, add them to the structured data on `/projects`.
 - **Commit** the redesign. It's currently all uncommitted.
 
 ## Open Questions
@@ -198,12 +237,11 @@ change.
 
 - 2026-11-03: Context files populated from a full read of the codebase,
   then the whole site was redesigned (see Completed). Not yet committed.
-- Don't run `next build` in the project while `next dev` is running: both
-  write to `.next`, and the build breaks the dev server (it serves 404
-  chunks until restarted). Verify builds in a separate copy instead.
+- Since Next 16, `next dev` uses `.next/dev`, so building alongside it is
+  safe. On Next 14 it wasn't.
 - Unused assets in `public/images/`: `components/` icons (`close.svg`,
   `fb.svg`, `ficon1.svg`, `ham.svg`, `insta.svg`, `mail.svg`, `phone.svg`,
-  `www.svg`), `pages/contact/i1.svg`, `pages/home/` (`cimg.png`,
+  `www.svg`), `pages/contact/i1.svg`, `pages/home/` (`img1.png` and `cimg1.png` were already removed; `cimg.png`,
   `cimg.jpg`, `img 2.png`, `img3.png`, `img4.png`, `img5.png`,
   `icon1.svg`, `icon3.svg`, `wicon1.svg`, `ileft.svg`, `iright.svg`,
   `star.svg`, `pic.png`, `truck1.png`, `truck1.jpg`), plus

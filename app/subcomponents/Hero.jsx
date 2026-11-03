@@ -14,9 +14,9 @@ const Hero = () => {
       gsap.matchMedia().add(MOTION_OK, () => {
         gsap.from('.media', { scale: 1.16, duration: 2.2, ease: 'power3.out' })
         gsap.set('[data-preload]', { autoAlpha: 1 })
-        riseLines('.title', { delay: 0.35, duration: 1.3 })
-        gsap.from('.lede', { autoAlpha: 0, y: 24, duration: 1.1, delay: 0.8, ease: 'power3.out' })
-        gsap.from('.cta', { autoAlpha: 0, y: 16, duration: 1, delay: 1.05, ease: 'power3.out' })
+        riseLines('.title', { delay: 0.1, duration: 1.2 })
+        gsap.from('.lede', { autoAlpha: 0, y: 24, duration: 1.1, delay: 0.45, ease: 'power3.out' })
+        gsap.from('.cta', { autoAlpha: 0, y: 16, duration: 1, delay: 0.65, ease: 'power3.out' })
       })
     },
     { scope: ref }
@@ -29,7 +29,8 @@ const Hero = () => {
           src='/images/home/hero-house.jpg'
           alt='Contemporary two-storey home with timber cladding and floor-to-ceiling glass beneath a mature tree'
           fill
-          priority
+          loading='eager'
+          fetchPriority='high'
           sizes='100vw'
         />
       </div>

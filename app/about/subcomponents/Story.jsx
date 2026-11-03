@@ -60,7 +60,7 @@ const Story = () => {
           </figure>
           <figure className='arc'>
             <Image
-              src='/images/pages/home/img1.png'
+              src='/images/pages/home/img1.jpg'
               alt='Contemporary house entrance with timber cladding'
               fill
               sizes='(max-width: 899px) 50vw, 24vw'

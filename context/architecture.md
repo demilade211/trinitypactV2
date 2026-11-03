@@ -4,9 +4,9 @@
 
 | Layer      | Technology                                            | Role                                                                    |
 | ---------- | ----------------------------------------------------- | ----------------------------------------------------------------------- |
-| Framework  | Next.js 14.0.4 (App Router), JavaScript               | Routing (`app/` directory), rendering, static build                     |
-| UI runtime | React 18                                              | Components                                                              |
-| Styling    | styled-components 6                                   | All component styling; SSR via `app/registry.js`                        |
+| Framework  | Next.js 16.4.4 (App Router, Turbopack), JavaScript    | Routing (`app/` directory), rendering, static build. Node ≥ 20.9        |
+| UI runtime | React 19.3                                            | Components                                                              |
+| Styling    | styled-components 6.6                                 | All component styling; SSR via `app/registry.js`                        |
 | Styling    | Tailwind CSS 3                                        | Only its base reset (`@tailwind base`) is still in effect. No utility classes are used; it's a candidate for removal |
 | CSS build  | PostCSS + Autoprefixer                                | Processes `globals.css`                                                 |
 | Fonts      | Instrument Serif (self-hosted, `next/font/local`) + Inter (`next/font/google`) | Defined in `app/fonts.js`, applied as CSS variables on `<html>` in `app/layout.js` |
@@ -17,8 +17,9 @@
 | Database   | None                                                  | —                                                                       |
 | Hosting    | Not configured in repo (README suggests Vercel)       | —                                                                       |
 
-No TypeScript, no test framework, no ESLint config file (the `lint` script
-exists but `next lint` will prompt to set it up).
+No TypeScript, no test framework, no linter (`next lint` was removed in
+Next 16, and so was the script). `next dev` writes to `.next/dev`, so
+`next build` can run while the dev server is up.
 
 ## System Boundaries
 
@@ -57,6 +58,33 @@ exists but `next lint` will prompt to set it up).
 - `public/images/`: `components/` (logo, legacy icons), `pages/<page>/`
   (original site imagery, including TPL project photos), `home/` and
   `services/` (Unsplash photography plus the generated `world-map.svg`).
+
+## SEO
+
+- The canonical origin is `SITE_URL` in `components/landing/seo.js`
+  (`https://www.tpltrinitypact.com`). `metadataBase` in `app/layout.js`
+  resolves every relative canonical and OG URL against it.
+- Each page exports `metadata = pageMetadata({ title, description, path })`.
+  This sets the title (through the root template), description, canonical,
+  Open Graph and Twitter card.
+- Share images are static files per route segment: `opengraph-image.jpg`,
+  `twitter-image.jpg` and `.alt.txt` (1200×630, rendered from a branded
+  HTML template).
+- Structured data (`JsonLd` component, `<` escaped):
+  - In the root layout: `RealEstateAgent` (the organisation: address,
+    phones, hours, socials, founder) and `WebSite`.
+  - Per page: a WebPage subtype plus `BreadcrumbList`. About adds the CEO
+    `Person`, and Services adds an `ItemList` of `Service`.
+  - No ratings or review markup, which would be self-serving.
+- File-based routes: `robots.js` → `/robots.txt`, `sitemap.js` →
+  `/sitemap.xml` (with images), `manifest.js`, `icon.png`,
+  `apple-icon.png`, and `not-found.js` (branded 404; Next marks it
+  noindex).
+- `next.config.js` 308-redirects `tpltrinitypact.com` → `www.`, serves
+  AVIF/WebP images, and drops `X-Powered-By`.
+- Search console verification tokens are read from
+  `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` /
+  `NEXT_PUBLIC_BING_SITE_VERIFICATION`.
 
 ## Storage Model
 
@@ -106,3 +134,7 @@ exists but `next lint` will prompt to set it up).
    components.
 8. Static assets are served from `public/` and referenced with absolute
    `/images/...` paths.
+9. Every new route needs `pageMetadata(...)` with its own `path`, an
+   entry in `app/sitemap.js`, share images, and a breadcrumb `JsonLd`.
+   Never put placeholder content (e.g. the unconfirmed project names) in
+   structured data.

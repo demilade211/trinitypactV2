@@ -32,11 +32,15 @@ consistency unless a context file is updated to say otherwise.
 - Routes live in `app/<route>/page.js`, and route-specific sections in
   `app/<route>/subcomponents/` (lowercase).
 - `page.js` files are server components: no `'use client'`. They export
-  `metadata`, where `title` is the bare page name and the root template
-  appends the company name.
+  `metadata = pageMetadata({ title, description, path })` from
+  `components/landing/seo.js`. The title is the bare page name, and the
+  root template appends the company name. Structured data goes in as
+  `<JsonLd data={…} />`, the first child of `LandingShell`.
 - Section components that use styled-components, hooks or GSAP start with
   `'use client'`.
 - Use `next/link` for internal navigation and `next/image` for every photo.
+  Above-the-fold heroes use `loading='eager' fetchPriority='high'`: the
+  `priority` prop is deprecated in Next 16.
 - Wrap every page in `LandingShell`. Inner pages start with `PageHero`.
 
 ## Styling
@@ -77,8 +81,11 @@ consistency unless a context file is updated to say otherwise.
 
 ## Verification
 
-- Don't run `next build` in the project while `next dev` is running (they
-  share `.next`). Verify in a separate copy of the repo.
+- `npm run build` must pass. Since Next 16, it's safe to run alongside
+  `next dev`.
+- For SEO-affecting changes, check the rendered `<head>`, run Lighthouse
+  (SEO should stay 100), and validate the JSON-LD in Google's Rich Results
+  Test.
 
 ## File Organization
 

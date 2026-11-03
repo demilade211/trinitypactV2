@@ -19,10 +19,13 @@ export const inView = (trigger, start = 'top 78%') => ({ trigger, start, once: t
 
 // Masked line-by-line rise used for the serif headings. autoSplit re-splits
 // on resize / font load and hands the running tween over to the new lines.
+// aria: 'none' — splitting into whole lines keeps words intact for screen
+// readers, and SplitText's default aria-label is invalid on span/p elements.
 export const riseLines = (target, vars = {}) =>
   SplitText.create(target, {
     type: 'lines',
     mask: 'lines',
+    aria: 'none',
     autoSplit: true,
     onSplit: (self) =>
       gsap.from(self.lines, {

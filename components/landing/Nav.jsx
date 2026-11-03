@@ -47,7 +47,7 @@ const Nav = () => {
     <Bar ref={ref} data-preload>
       <Link href='/' className='brand' aria-label={`${SITE.name}, home`}>
         <span className='logo'>
-          <Image src='/images/components/logo.png' alt='' width={40} height={40} priority />
+          <Image src='/images/components/logo.png' alt='' width={40} height={40} loading='eager' />
         </span>
         <span className='word serif'>
           TPL Trinitypact

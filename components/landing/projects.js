@@ -24,7 +24,7 @@ export const PROJECTS = [
     alt: 'Newly finished terrace of cream and terracotta apartment buildings',
   },
   {
-    src: '/images/pages/home/img1.png',
+    src: '/images/pages/home/img1.jpg',
     title: 'Contemporary Family Home',
     detail: 'Residential development',
     tag: 'Featured',
@@ -38,7 +38,7 @@ export const PROJECTS = [
     alt: 'Render of a two-storey villa with a dark upper level and pergola',
   },
   {
-    src: '/images/pages/home/cimg1.png',
+    src: '/images/pages/home/cimg1.jpg',
     title: 'Open-Plan Interiors',
     detail: 'Interior finishing',
     tag: 'Featured',

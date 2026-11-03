@@ -1,7 +1,16 @@
 // Company facts shared across the site — the single source for contact details.
+const POSTAL = {
+  street: '7, Bailey Street, Off Oguntolu Street',
+  locality: 'Shomolu',
+  region: 'Lagos',
+  country: 'NG',
+}
+
 export const SITE = {
   name: 'TPL Trinitypact Limited',
-  address: ['7, Bailey Street, Off Oguntolu Street,', 'Shomolu, Lagos.'],
+  postal: POSTAL,
+  // Display lines, as printed on the site.
+  address: [`${POSTAL.street},`, `${POSTAL.locality}, ${POSTAL.region}.`],
   email: 'trinitypactlimited@gmail.com',
   phones: ['+234 806 078 7963', '+234 802 143 1957'],
   hours: 'Monday – Friday, 8:00am – 6:00pm',
