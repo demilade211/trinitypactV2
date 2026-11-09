@@ -37,9 +37,9 @@ const Hero = () => {
       <div className='shade' />
       <div className='content'>
         <h1 className='title' data-preload>
-          Best-Value Deals
+          Building the Future,
           <br />
-          Now in Your City
+          Sustainably
         </h1>
         <p className='lede' data-preload>
           Providing exceptional real estate services that cater to your unique needs and aspirations. We strive to
@@ -89,9 +89,9 @@ const Section = styled.section`
     padding: 0 var(--pad) 64px;
   }
   .title {
-    font-size: clamp(48px, 7.2vw, 108px);
+    font-size: clamp(48px, 6.2vw, 92px);
     line-height: 0.98;
-    letter-spacing: -0.015em;
+    letter-spacing: -0.035em;
   }
   .lede {
     max-width: 400px;
