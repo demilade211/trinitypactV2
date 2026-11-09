@@ -36,4 +36,13 @@ export const SERVICES = [
     alt: 'Construction crew working among steel reinforcement on a building site',
     text: 'TPL Trinitypact is a leader in construction, delivering high-quality projects with precision and efficiency. From groundbreaking to final touches, our skilled team manages every aspect, emphasizing safety, quality, and timely completion.',
   },
+  {
+    id: 'advisory-services',
+    title: 'Advisory Services',
+    mark: 'meet',
+    tone: 'olive',
+    src: '/images/services/hero-site.jpg',
+    alt: 'Architectural professionals reviewing building plans and property designs',
+    text: 'TPL Trinitypact provides comprehensive real estate advisory services across Conception, Design/Build, Appraisal, and Monitoring. We offer strategic insights, professional guidance, and tailored solutions to help clients make informed decisions, manage project risks, and maximize the value of their real estate investments.',
+  },
 ]

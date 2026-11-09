@@ -28,6 +28,11 @@ const SERVICES = [
     mark: 'echo',
     text: 'We deliver high-quality projects with precision and efficiency. From groundbreaking to final touches, our skilled team manages every aspect, emphasizing safety, quality, and timely completion.',
   },
+  {
+    title: 'Advisory Services',
+    mark: 'meet',
+    text: 'Our advisory services cover every stage of your real estate journey, from conception and design/build to appraisal and monitoring. We provide strategic insights, professional guidance, and tailored solutions to help clients make informed decisions and maximize project value.',
+  },
 ]
 
 const ServicesGrid = () => {
@@ -80,19 +85,17 @@ const ServicesGrid = () => {
 
           {SERVICES.map((s) => (
             <article key={s.title} className='card'>
-              <div className='surface'>
-                <GeoMark variant={s.mark} className='mark' />
-                <div>
-                  <h3>{s.title}</h3>
-                  <p>{s.text}</p>
-                </div>
+              <GeoMark variant={s.mark} className='mark' />
+              <div>
+                <h3>{s.title}</h3>
+                <p>{s.text}</p>
               </div>
             </article>
           ))}
 
-          <div className='art'>
+          {/* <div className='art'>
             <Artwork />
-          </div>
+          </div> */}
         </div>
       </Container>
     </Section>
@@ -141,11 +144,6 @@ const Section = styled.section`
   }
   .card {
     display: flex;
-  }
-  /* GSAP animates .card on entry; hover lifts the inner surface so the two never fight. */
-  .surface {
-    display: flex;
-    flex: 1;
     flex-direction: column;
     justify-content: space-between;
     gap: 72px;
@@ -211,7 +209,7 @@ const Section = styled.section`
       grid-template-columns: 1fr;
       grid-template-areas: 'intro' 'title' 'lede' 'c1' 'c2' 'c3' 'c4' 'art';
     }
-    .surface {
+    .card {
       min-height: 0;
       gap: 48px;
       padding: 26px;

@@ -36,7 +36,7 @@ const Story = () => {
           <div className='body'>
             <p>
               Welcome to TPL Trinitypact Limited, a dynamic real estate development company rooted in the vibrant city
-              of Lagos, Nigeria. With a rich history spanning over four years, we specialize in the art of property
+              of Lagos, Nigeria. With a rich history spanning over many years, we specialize in the art of property
               development and investment — from crafting distinctive residential spaces to shaping commercial
               landscapes.
             </p>

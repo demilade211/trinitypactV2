@@ -1,7 +1,7 @@
 // Company facts shared across the site — the single source for contact details.
 const POSTAL = {
-  street: '7, Bailey Street, Off Oguntolu Street',
-  locality: 'Shomolu',
+  street: '9, Church Street Off Abidogun Street',
+  locality: 'Onipanu',
   region: 'Lagos',
   country: 'NG',
 }

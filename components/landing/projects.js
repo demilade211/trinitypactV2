@@ -4,7 +4,7 @@
 export const PROJECTS = [
   {
     src: '/images/pages/home/l2.jpeg',
-    title: 'Four-Storey Apartment Block',
+    title: 'Four-Floors Apartment Block',
     detail: 'Residential development · Lagos',
     tag: 'Featured',
     alt: 'Architectural render of a four-storey apartment block with balconies',
