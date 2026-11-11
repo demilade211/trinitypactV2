@@ -10,7 +10,7 @@ import { gsap, useGSAP, MOTION_OK, inView, riseLines, fadeUp } from '@/component
 
 // Set to the portrait's path (e.g. '/images/pages/about/ceo.jpg') once the
 // photo is supplied; until then a monogram placeholder is shown.
-const PORTRAIT = '/images/pages/about/ceo.jpeg'
+const PORTRAIT = '/images/pages/about/ceo1.jpeg'
 
 const CEO = {
   name: 'Prince Adedayo Ogunkoya',

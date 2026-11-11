@@ -9,7 +9,7 @@ import { SITE } from '@/components/landing/site'
 import { gsap, useGSAP, MOTION_OK, inView, riseLines, fadeUp } from '@/components/landing/motion'
 
 // Simplified form of SITE.postal: Google geocodes it more reliably without "Off Oguntolu Street".
-const QUERY = encodeURIComponent('7 Bailey Street, Shomolu, Lagos, Nigeria')
+const QUERY = encodeURIComponent('9, Church Street, Onipanu, Lagos, Nigeria')
 const MAP_EMBED = `https://www.google.com/maps?q=${QUERY}&z=16&output=embed`
 const MAP_LINK = `https://www.google.com/maps/search/?api=1&query=${QUERY}`
 const DIRECTIONS = `https://www.google.com/maps/dir/?api=1&destination=${QUERY}`
@@ -40,7 +40,7 @@ const MapBand = () => {
         <div className='card'>
           <Eyebrow>Visit Our Office</Eyebrow>
           <h2 className='title'>
-            Shomolu,
+            Ilupeju,
             <br />
             Lagos.
           </h2>
