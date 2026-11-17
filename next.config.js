@@ -7,6 +7,10 @@ const nextConfig = {
     images: {
         formats: ['image/avif', 'image/webp'],
     },
+    experimental: {
+        // Remind on (and target) security releases when running `next dev` / `next build`.
+        agentUpgrade: 'security',
+    },
     // One canonical host: send the bare domain to www permanently.
     async redirects() {
         return [
