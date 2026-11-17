@@ -158,6 +158,30 @@ change.
   - `npm audit`: 0 production vulnerabilities. 3 moderate ones remain in
     Tailwind's build-time `glob` chain.
 
+- **2026-11-17: Fifth service (Advisory Services) integrated.**
+  - The client added Advisory to `services.js` and the home
+    `ServicesGrid`.
+  - Gave Advisory its own Unsplash photo
+    (`public/images/services/advisory.jpg`, a consultation around a
+    table) instead of the reused page-hero image. It also has a distinct
+    `quarter` mark.
+  - Its four stages (Conception, Design/Build, Appraisal, Monitoring)
+    render as a numbered list on its panel through a new optional
+    `points` field.
+  - The `/services` index now has one column per service
+    (`--count`): 5 across on desktop, 3 on tablet, 2 on small tablets.
+  - The home `ServicesGrid` was relaid for five cards:
+    - The lede and the restored geometric `Artwork` share the first
+      column, beside cards in rows of 2 then 3.
+    - On tablet the artwork is hidden and the fifth card spans both
+      columns.
+    - The `.surface` wrapper is restored, so the hover lift no longer
+      fights the GSAP entrance.
+  - Verified with a production build: no errors, broken images,
+    overflow or hidden elements at 1440 and 390 widths.
+- Next 16.4.4 is now flagged by a security advisory. 16.4.6 is the
+  latest; upgrade pending the client's go-ahead.
+
 ## In Progress
 
 - None.

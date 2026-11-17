@@ -27,7 +27,7 @@ const ServicePanels = () => {
             { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.4, ease: 'power4.inOut', scrollTrigger: trigger }
           )
           gsap.from(panel.querySelector('.media img'), { scale: 1.25, duration: 2, ease: 'power3.out', scrollTrigger: trigger })
-          fadeUp(panel.querySelectorAll('.meta, .copy p, .copy .cta'), { stagger: 0.1, delay: 0.25, scrollTrigger: trigger })
+          fadeUp(panel.querySelectorAll('.meta, .copy p, .points li, .copy .cta'), { stagger: 0.08, delay: 0.25, scrollTrigger: trigger })
           riseLines(panel.querySelector('h2'), { delay: 0.2, scrollTrigger: trigger })
         })
       })
@@ -65,6 +65,16 @@ const ServicePanels = () => {
                   <div>
                     <h2>{s.title}</h2>
                     <p>{s.text}</p>
+                    {s.points && (
+                      <ol className='points' aria-label={`${s.title} stages`}>
+                        {s.points.map((point, j) => (
+                          <li key={point}>
+                            <span className='point-num serif'>{String(j + 1).padStart(2, '0')}</span>
+                            <span className='serif'>{point}</span>
+                          </li>
+                        ))}
+                      </ol>
+                    )}
                     <div className='cta'>
                       <PillButton href='/contact' tone={s.tone === 'ink' ? 'olive' : 'dark'}>
                         Discuss Your Project
@@ -159,6 +169,30 @@ const Section = styled.section`
     font-size: 15px;
     line-height: 1.6;
     opacity: 0.8;
+  }
+  .points {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 24px;
+    max-width: 480px;
+    margin-top: 26px;
+    list-style: none;
+    li {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding: 12px 0 10px;
+      border-top: 1px solid rgba(25, 25, 23, 0.2);
+      font-size: clamp(19px, 1.6vw, 23px);
+      line-height: 1.1;
+    }
+  }
+  .tone-ink .points li {
+    border-top-color: var(--line-dark);
+  }
+  .point-num {
+    font-size: 14px;
+    opacity: 0.55;
   }
   .cta {
     margin-top: 32px;

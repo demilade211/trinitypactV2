@@ -46,7 +46,7 @@ const Overview = () => {
           </div>
         </div>
 
-        <ol className='index'>
+        <ol className='index' style={{ '--count': SERVICES.length }}>
           {SERVICES.map((s, i) => (
             <li key={s.id}>
               <a href={`#${s.id}`}>
@@ -88,7 +88,8 @@ const Section = styled.section`
 
   .index {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    /* One column per service, so the index always reads as a single row. */
+    grid-template-columns: repeat(var(--count), 1fr);
     gap: 18px;
     margin-top: clamp(56px, 7vw, 112px);
     list-style: none;
@@ -118,11 +119,12 @@ const Section = styled.section`
     font-size: 15px;
   }
   .name {
-    font-size: clamp(20px, 1.7vw, 25px);
+    font-size: clamp(19px, 1.5vw, 23px);
     line-height: 1.1;
   }
   .arrow {
-    align-self: center;
+    align-self: start;
+    margin-top: 4px;
     transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
   }
   a:hover .arrow,
@@ -131,6 +133,11 @@ const Section = styled.section`
   }
 
   @media (max-width: 1199px) {
+    .index {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (max-width: 899px) {
     .index {
       grid-template-columns: repeat(2, 1fr);
     }

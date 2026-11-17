@@ -1,4 +1,5 @@
-// Service copy from the original services page.
+// Service copy from the original services page (Advisory added by the client).
+// Each service needs its own photo and mark — the page shows them in sequence.
 export const SERVICES = [
   {
     id: 'real-estate-development',
@@ -39,10 +40,12 @@ export const SERVICES = [
   {
     id: 'advisory-services',
     title: 'Advisory Services',
-    mark: 'meet',
+    mark: 'quarter',
     tone: 'olive',
-    src: '/images/services/hero-site.jpg',
-    alt: 'Architectural professionals reviewing building plans and property designs',
-    text: 'TPL Trinitypact provides comprehensive real estate advisory services across Conception, Design/Build, Appraisal, and Monitoring. We offer strategic insights, professional guidance, and tailored solutions to help clients make informed decisions, manage project risks, and maximize the value of their real estate investments.',
+    src: '/images/services/advisory.jpg',
+    alt: 'Advisors taking notes around a timber meeting table in afternoon light',
+    text: 'TPL Trinitypact provides comprehensive real estate advisory services. We offer strategic insights, professional guidance, and tailored solutions to help clients make informed decisions, manage project risks, and maximize the value of their real estate investments.',
+    // Advisory stages, rendered as a numbered list on the panel.
+    points: ['Conception', 'Design/Build', 'Appraisal', 'Monitoring'],
   },
 ]

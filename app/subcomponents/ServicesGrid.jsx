@@ -7,6 +7,7 @@ import Eyebrow from '@/components/landing/Eyebrow'
 import { Artwork, GeoMark } from '@/components/landing/Shapes'
 import { gsap, useGSAP, MOTION_OK, inView, riseLines, fadeUp } from '@/components/landing/motion'
 
+// Shortened versions of the copy on /services. Each card has its own mark.
 const SERVICES = [
   {
     title: 'Real Estate Development',
@@ -30,7 +31,7 @@ const SERVICES = [
   },
   {
     title: 'Advisory Services',
-    mark: 'meet',
+    mark: 'quarter',
     text: 'Our advisory services cover every stage of your real estate journey, from conception and design/build to appraisal and monitoring. We provide strategic insights, professional guidance, and tailored solutions to help clients make informed decisions and maximize project value.',
   },
 ]
@@ -44,8 +45,9 @@ const ServicesGrid = () => {
         fadeUp('[data-eyebrow], .lede', { stagger: 0.1, scrollTrigger: inView('.title') })
         riseLines('.title', { scrollTrigger: inView('.title') })
 
+        // Cards fill a row of two, then a row of three — stagger within each row.
         gsap.utils.toArray('.card', ref.current).forEach((card, i) => {
-          const tl = gsap.timeline({ scrollTrigger: inView(card, 'top 88%'), delay: (i % 2) * 0.12 })
+          const tl = gsap.timeline({ scrollTrigger: inView(card, 'top 88%'), delay: (i < 2 ? i : i - 2) * 0.12 })
           tl.from(card, { autoAlpha: 0, y: 60, duration: 1.1, ease: 'power3.out' }).from(
             card.querySelector('.mark'),
             { scale: 0.4, rotate: -90, autoAlpha: 0, duration: 1, ease: 'power3.out' },
@@ -78,24 +80,28 @@ const ServicesGrid = () => {
             <br />
             Tailored to Your Aspirations
           </h2>
-          <p className='lede'>
-            Our expertise extends beyond construction, as we provide valuable real estate advisory services, ensuring a
-            comprehensive approach to your property journey.
-          </p>
+
+          <div className='side'>
+            <p className='lede'>
+              Our expertise extends beyond construction, as we provide valuable real estate advisory services, ensuring
+              a comprehensive approach to your property journey.
+            </p>
+            <div className='art'>
+              <Artwork />
+            </div>
+          </div>
 
           {SERVICES.map((s) => (
             <article key={s.title} className='card'>
-              <GeoMark variant={s.mark} className='mark' />
-              <div>
-                <h3>{s.title}</h3>
-                <p>{s.text}</p>
+              <div className='surface'>
+                <GeoMark variant={s.mark} className='mark' />
+                <div>
+                  <h3>{s.title}</h3>
+                  <p>{s.text}</p>
+                </div>
               </div>
             </article>
           ))}
-
-          {/* <div className='art'>
-            <Artwork />
-          </div> */}
         </div>
       </Container>
     </Section>
@@ -105,13 +111,15 @@ const ServicesGrid = () => {
 const Section = styled.section`
   padding-block: var(--section);
 
+  /* Desktop: the intro column carries the lede and artwork beside two cards,
+     then the remaining three cards fill the next row. */
   .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
       'intro title title'
-      'lede  c1    c2'
-      'c3    c4    art';
+      'side  c1    c2'
+      'c3    c4    c5';
     gap: 18px;
   }
   .intro {
@@ -124,11 +132,30 @@ const Section = styled.section`
     font-size: clamp(32px, 3.7vw, 54px);
     line-height: 1.1;
   }
+  .side {
+    grid-area: side;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
   .lede {
-    grid-area: lede;
     max-width: 390px;
     color: var(--text);
     font-size: 15px;
+  }
+  .art {
+    flex: 1;
+    min-height: 220px;
+    overflow: hidden;
+    border-radius: 14px;
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    [data-shape] {
+      transform-box: fill-box;
+    }
   }
   .card:nth-of-type(1) {
     grid-area: c1;
@@ -142,8 +169,16 @@ const Section = styled.section`
   .card:nth-of-type(4) {
     grid-area: c4;
   }
+  .card:nth-of-type(5) {
+    grid-area: c5;
+  }
   .card {
     display: flex;
+  }
+  /* GSAP animates .card on entry; hover lifts the inner surface so the two never fight. */
+  .surface {
+    display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: space-between;
     gap: 72px;
@@ -172,19 +207,6 @@ const Section = styled.section`
     height: auto;
     color: var(--ink);
   }
-  .art {
-    grid-area: art;
-    overflow: hidden;
-    border-radius: 14px;
-    svg {
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
-    [data-shape] {
-      transform-box: fill-box;
-    }
-  }
 
   @media (max-width: 1199px) {
     .grid {
@@ -192,30 +214,34 @@ const Section = styled.section`
       grid-template-areas:
         'intro intro'
         'title title'
-        'lede  lede'
+        'side  side'
         'c1    c2'
         'c3    c4'
-        'art   art';
+        'c5    c5';
     }
-    .lede {
+    .side {
       margin-bottom: 24px;
     }
     .art {
-      aspect-ratio: 2 / 1;
+      display: none;
+    }
+    .card:nth-of-type(5) .surface {
+      min-height: 320px;
+      p {
+        max-width: 620px;
+      }
     }
   }
   @media (max-width: 767px) {
     .grid {
       grid-template-columns: 1fr;
-      grid-template-areas: 'intro' 'title' 'lede' 'c1' 'c2' 'c3' 'c4' 'art';
+      grid-template-areas: 'intro' 'title' 'side' 'c1' 'c2' 'c3' 'c4' 'c5';
     }
-    .card {
+    .surface,
+    .card:nth-of-type(5) .surface {
       min-height: 0;
       gap: 48px;
       padding: 26px;
-    }
-    .art {
-      aspect-ratio: 444 / 424;
     }
   }
 `
